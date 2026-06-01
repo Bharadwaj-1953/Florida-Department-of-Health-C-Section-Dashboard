@@ -20,7 +20,7 @@ The tool is built entirely in vanilla HTML, CSS, and JavaScript — no build ste
 
 ## 🌐 Live Demo
 
-**[https://your-project.vercel.app](https://your-project.vercel.app)**
+**[https://florida-department-of-health-c-sect.vercel.app/](https://florida-department-of-health-c-sect.vercel.app/)**
 
 > Deployed on Vercel as a static site. No login required — open and explore immediately.
 
@@ -30,7 +30,7 @@ The tool is built entirely in vanilla HTML, CSS, and JavaScript — no build ste
 
 ```bash
 florida-perinatal-dashboard/
-├── ACHA.html                                        # Complete self-contained dashboard (HTML + CSS + JS + data)
+├── index.html                                        # Complete self-contained dashboard (HTML + CSS + JS + data)
 ├── Florida_Medicaid_Primary_C_Section_Data.xlsx     # Source data (5 sheets, raw Medicaid claims extract)
 └── README.md                                        # This file
 ```
@@ -132,15 +132,15 @@ The raw data behind the dashboard is included as `Florida_Medicaid_Primary_C_Sec
 git clone https://github.com/Bharadwaj-1953/florida-perinatal-dashboard.git
 
 # Open directly in browser — no server needed
-open ACHA.html          # macOS
-start ACHA.html         # Windows
-xdg-open ACHA.html      # Linux
+open index.html          # macOS
+start index.html         # Windows
+xdg-open index.html      # Linux
 ```
 
 ### Deploy to GitHub Pages
 1. Push the repo to GitHub
 2. Go to **Settings → Pages → Source: main branch / root**
-3. GitHub Pages will serve `ACHA.html` as a static site
+3. GitHub Pages will serve `index.html` as a static site
 
 ### Deploy to Vercel
 Drop the folder into Vercel with no configuration required. The file is fully static — Vercel detects and serves it instantly.
