@@ -1,5 +1,5 @@
 <h1 align="center">
-Florida-Department-of-Health-C-Section-Dashboard
+Interactive Florida Medicaid C-Section Trends and <br> Regional Analytics Dashboard
 </h1>
 
 ---
@@ -7,13 +7,13 @@ Florida-Department-of-Health-C-Section-Dashboard
 ## 📝 Abstract
 
 <div align="justify">
-This project is an interactive, single-file analytics dashboard built for the Florida Agency for Health Care Administration (AHCA) as part of a Government Operations Data Specialist work sample. The dashboard visualizes eight years of Florida Medicaid primary cesarean section data (2016–2023), covering over 860,000 birth records across 11 geographic service regions, 4 maternal age groups, and individual birth ages (14–46).
+BirthViz is an interactive, single-file analytics dashboard built for the Florida Agency for Health Care Administration (AHCA) as part of a Government Operations Data Specialist work sample. The dashboard visualizes eight years of Florida Medicaid primary cesarean section data (2016–2023), covering over 860,000 birth records across 11 geographic service regions, 4 maternal age groups, and individual birth ages (14–46).
 </div>
 
 <br>
 
 <div align="justify">
-The tool is built entirely in vanilla HTML, CSS, and JavaScript — no build step, no framework, no server required. It renders a fully interactive, publication-quality dashboard that a state agency analyst can open in any modern browser and immediately use for policy exploration, stakeholder briefings, or public reporting.
+BirthViz is built entirely in vanilla HTML, CSS, and JavaScript — no build step, no framework, no server required. It renders a fully interactive, publication-quality dashboard that a state agency analyst can open in any modern browser and immediately use for policy exploration, stakeholder briefings, or public reporting.
 </div>
 
 ---
@@ -29,7 +29,7 @@ The tool is built entirely in vanilla HTML, CSS, and JavaScript — no build ste
 ## 📁 Repository Structure
 
 ```bash
-florida-perinatal-dashboard/
+BirthViz/
 ├── index.html                                        # Complete self-contained dashboard (HTML + CSS + JS + data)
 ├── Florida_Medicaid_Primary_C_Section_Data.xlsx     # Source data (5 sheets, raw Medicaid claims extract)
 └── README.md                                        # This file
@@ -53,7 +53,7 @@ florida-perinatal-dashboard/
 ## 🛠️ Technologies Used
 
 | Category | Technology |
-|----------|-----------|
+|----------|------------|
 | **Structure** | HTML5 |
 | **Styling** | CSS3 (custom properties, CSS Grid, Flexbox) |
 | **Charting** | Chart.js 4.4 |
@@ -66,7 +66,7 @@ florida-perinatal-dashboard/
 
 ## 📊 Source Data — Excel Workbook
 
-The raw data behind the dashboard is included as `Florida_Medicaid_Primary_C_Section_Data.xlsx`. It contains 5 structured sheets extracted from Florida Medicaid claims and encounter records.
+The raw data behind BirthViz is included as `Florida_Medicaid_Primary_C_Section_Data.xlsx`. It contains 5 structured sheets extracted from Florida Medicaid claims and encounter records.
 
 | Sheet | Rows | Columns | Description |
 |-------|------|---------|-------------|
@@ -129,7 +129,7 @@ The raw data behind the dashboard is included as `Florida_Medicaid_Primary_C_Sec
 ### Open Locally
 ```bash
 # Clone the repository
-git clone https://github.com/Bharadwaj-1953/florida-perinatal-dashboard.git
+git clone https://github.com/Bharadwaj-1953/BirthViz.git
 
 # Open directly in browser — no server needed
 open index.html          # macOS
@@ -152,7 +152,7 @@ Drop the folder into Vercel with no configuration required. The file is fully st
 ## 🗺️ Dashboard Panels
 
 | Panel | What It Shows |
-|-------|--------------|
+|-------|---------------|
 | **Statewide Trend** | Annual rate line chart with 2017 peak marker, monthly bar chart, plain-language C-section explainer |
 | **By Age Group** | KPI cards per age group with YoY delta, grouped bar chart, multi-line trend overlay (2016–2023), single-age scatter plot (ages 14–46) |
 | **By Region** | Ranked region table with above/below-average badges, interactive D3 choropleth map, region detail card, region × age bar chart |
@@ -170,7 +170,7 @@ Drop the folder into Vercel with no configuration required. The file is fully st
 
 ## 📊 Experimental Results and Analysis
 
-- The dashboard was developed and tested across Chrome, Firefox, Edge, and Safari on both Windows and macOS
+- BirthViz was developed and tested across Chrome, Firefox, Edge, and Safari on both Windows and macOS
 - Chart.js canvas rendering was tuned to initialize after the layout settles (`80ms setTimeout`) to avoid zero-height render artifacts in browsers that compute container size lazily
 - The D3 choropleth merges FIPS-coded county geometries into AHCA's 11 service regions at runtime using `topojson.merge`, then fits a Mercator projection to Florida's bounding box — no pre-processed region GeoJSON required
 - Custom Chart.js plugins handle the 2017 peak annotation line and the toggle-able legend with checkbox states, keeping all chart logic self-contained without a plugin registry dependency
